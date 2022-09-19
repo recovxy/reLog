@@ -1,21 +1,26 @@
 #pragma once
 
-#include <string>
+#include "StringPiece.h"
 
 template<int SIZE>
 class LogBuffer
 {
 public:
-    LogBuffer() : 
+    LogBuffer() : size_(SIZE) {}
+    LogBuffer();
+
+    ~LogBuffer();
 
 private:
-    std::string buffer_;
-
+    StringPeice str_;
 };
 
+template<typename T>
 class LogStream
 {
 public:
+    LogStream();
+    
 
 
 private:
